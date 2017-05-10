@@ -1,0 +1,233 @@
+package com.sql.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.Index;
+import javax.persistence.Table;
+
+import com.lib.sql.DbEntity;
+
+
+/**
+ * ClassName:ItemData <br/>
+ * Function: TODO (道具数据). <br/>
+ * Reason: TODO (). <br/>
+ * Date: 2015-6-30 下午8:35:00 <br/>
+ * 
+ * @author yxd
+ * @version
+ * @see
+ */
+@Entity
+@Table(name = "item",indexes={@Index(name="role_id",columnList="roleId")})
+public class ItemData extends DbEntity{
+	
+	/****/
+	private static final long serialVersionUID = -3267935359170487666L;
+	
+	private int configId;// 配置模板编号
+	private int quality;// 品质
+	private int itemType;// 在背包中道具类型
+	private int indexInBag;// 在背包中物品位置
+	private int number;// 数量
+	
+	private long roleId;// 所属角色编号
+	
+	private long effectTime;// 物品生效时间
+	
+	private int renewTimes;// 续费次数
+	
+	/**
+	 * 装备栏中的位置
+	 */
+	private int pos;
+	
+	/**
+	 * 装备中的分数
+	 */
+	private int score;
+	/**
+	 * 装备孔位
+	 */
+	private int socket;
+	
+	/**
+	 * 物品等级
+	 */
+	private int level;
+	
+	/**
+	 * 物品所在位置
+	 * 默认为背包。仓库这边做了手动设置
+	 * 1:背包
+	 * 2：仓库
+	 */
+	private int itemFlag = 1;
+	
+	/**
+	 * 是否绑定及绑定类型
+	 */
+	private int itemIsBindType;
+	
+	/**
+	 * 是否绑定及绑定类型  ：0 没有绑定 ，1 已经使用绑定了
+	 */
+	private int itemIsBindTypeBoolea;
+	
+	/**
+	 * 在仓库中的位置
+	 */
+	private int indexInCargo;
+	
+	/**
+	 * 物品所在仓库类型
+	 */
+	private int cargoType;
+	
+	public int getItemIsBindTypeBoolea() {
+    	return itemIsBindTypeBoolea;
+    }
+
+	public void setItemIsBindTypeBoolea(int itemIsBindTypeBoolea) {
+    	this.itemIsBindTypeBoolea = itemIsBindTypeBoolea;
+    }
+
+	public int getItemIsBindType() {
+    	return itemIsBindType;
+    }
+
+	public void setItemIsBindType(int itemIsBindType) {
+    	this.itemIsBindType = itemIsBindType;
+    }
+
+	public int getLevel() {
+		return level;
+	}
+	
+	public void setLevel(int level) {
+		this.level = level;
+	}
+	
+	public int getScore() {
+		return score;
+	}
+	
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
+	public int getSocket() {
+		return socket;
+	}
+	
+	public void setSocket(int socket) {
+		this.socket = socket;
+	}
+	
+	public int getPos() {
+		return pos;
+	}
+	
+	public void setPos(int pos) {
+		this.pos = pos;
+	}
+	
+	public int getConfigId() {
+		return configId;
+	}
+	
+	public void setConfigId(int configId) {
+		this.configId = configId;
+	}
+	
+	public int getQuality() {
+		return quality;
+	}
+	
+	public void setQuality(int quality) {
+		this.quality = quality;
+	}
+	
+	public int getNumber() {
+		return number;
+	}
+	
+	public void setNumber(int number) {
+		this.number = number;
+		
+	}
+	
+	public int getItemType() {
+		return itemType;
+	}
+	
+	public void setItemType(int itemType) {
+		this.itemType = itemType;
+	}
+	
+	public int getIndexInBag() {
+		return indexInBag;
+	}
+	
+	public void setIndexInBag(int indexInBag) {
+		this.indexInBag = indexInBag;
+	}
+	
+	public long getRoleId() {
+		return roleId;
+	}
+	
+	public void setRoleId(long roleId) {
+		this.roleId = roleId;
+	}
+	
+	public long getEffectTime() {
+		return effectTime;
+	}
+	
+	public void setEffectTime(long effectTime) {
+		this.effectTime = effectTime;
+	}
+	
+	public int getRenewTimes() {
+		return renewTimes;
+	}
+	
+	public void setRenewTimes(int renewTimes) {
+		this.renewTimes = renewTimes;
+	}
+
+	public int getItemFlag() {
+		return itemFlag;
+	}
+
+	public void setItemFlag(int itemFlag) {
+		this.itemFlag = itemFlag;
+	}
+	
+	public int getIndexInCargo() {
+		return indexInCargo;
+	}
+
+	public void setIndexInCargo(int indexInCargo) {
+		this.indexInCargo = indexInCargo;
+	}
+
+	public int getCargoType() {
+		return cargoType;
+	}
+
+	public void setCargoType(int cargoType) {
+		this.cargoType = cargoType;
+	}
+
+	@Override
+	public String toString() {
+		return "ItemData [configId=" + configId + ", quality=" + quality
+				+ ", itemType=" + itemType + ", indexInBag=" + indexInBag
+				+ ", number=" + number + ", roleId=" + roleId + ", effectTime="
+				+ effectTime + ", renewTimes=" + renewTimes + ", pos=" + pos
+				+ ", score=" + score + ", socket=" + socket + ", level="
+				+ level + ", itemFlag=" + itemFlag + "]";
+	}
+	
+}
