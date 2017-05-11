@@ -1,15 +1,14 @@
-package com.sql.dbdao;
+package com.lyh.game.hibernate.dbdao;
 
 import java.util.List;
 
-import org.hibernate.Query;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.engine.utils.log.LogUtils;
-import com.lib.sql.DbEntity;
+import com.lyh.game.lib.sql.DbEntity;
+import com.lyh.game.utils.log.LogUtils;
 
 /**
  * 数据保存

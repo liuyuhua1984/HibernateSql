@@ -1,11 +1,11 @@
-package com.sql.dbdao;
+package com.lyh.game.hibernate.dbdao;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
-import com.engine.utils.log.LogUtils;
-import com.lib.sql.ISqlDAO;
+import com.lyh.game.lib.sql.ISqlDAO;
+import com.lyh.game.utils.log.LogUtils;
 
 /**
  * ClassName:DbDao <br/>

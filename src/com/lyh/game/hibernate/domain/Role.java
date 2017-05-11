@@ -1,5 +1,5 @@
 
-package com.sql.domain;
+package com.lyh.game.hibernate.domain;
 
 import java.sql.Timestamp;
 
@@ -8,7 +8,7 @@ import javax.persistence.Index;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 
-import com.lib.sql.DbEntity;
+import com.lyh.game.lib.sql.DbEntity;
 /**
  * ClassName:Role <br/>
  * Function: TODO (角色数据库数据). <br/>

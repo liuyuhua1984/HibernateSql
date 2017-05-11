@@ -6,13 +6,13 @@
  * @date:2015-11-16下午6:28:51
  * @version V1.0
  */
-package com.sql.domain;
+package com.lyh.game.hibernate.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Index;
 import javax.persistence.Table;
 
-import com.lib.sql.DbEntity;
+import com.lyh.game.lib.sql.DbEntity;
 
 
 /**
